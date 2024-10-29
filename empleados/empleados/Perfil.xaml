@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="empleados.Perfil"
+             Title="Perfil">
+    <StackLayout Padding="20" Spacing="15" VerticalOptions="Center">
+
+        <!-- Sección superior con fondo de color -->
+        <Frame BackgroundColor="#D9B3FF" CornerRadius="0" Padding="40, 40, 40, 0" HeightRequest="250" HorizontalOptions="FillAndExpand">
+            <StackLayout HorizontalOptions="Center" VerticalOptions="StartAndExpand" Spacing="10">
+
+                <!-- Nombre del usuario -->
+                <Label Text="Nombre" 
+                       FontSize="Large" 
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center" 
+                       TextColor="Black" />
+
+                <!-- Imagen del usuario -->
+                <Image Source="dotnet_bot.png" 
+                       HeightRequest="100" 
+                       WidthRequest="100" 
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center" />
+
+                <!-- Botones de editar y eliminar -->
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20" VerticalOptions="EndAndExpand">
+                    <Button Text="Editar" 
+                            WidthRequest="100" 
+                            BackgroundColor="#D3D3D3" 
+                            TextColor="Black" 
+                            CornerRadius="20"
+                            Clicked="OnEditarClicked" />
+
+                    <Button Text="Eliminar" 
+                            WidthRequest="100" 
+                            BackgroundColor="#D3D3D3" 
+                            TextColor="Black" 
+                            CornerRadius="20"
+                            Clicked="OnEliminarClicked" />
+
+                </StackLayout>
+
+            </StackLayout>
+        </Frame>
+
+        <!-- Correo del usuario -->
+        <Label Text="Correo: JuanPerez@gmail.com"
+               FontSize="Medium"
+               HorizontalOptions="Center"
+               VerticalOptions="Start" />
+
+    </StackLayout>
+</ContentPage>
